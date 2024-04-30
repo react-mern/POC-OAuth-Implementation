@@ -18,17 +18,18 @@
 - **Authorization Flow**: OAuth involves a flow of interactions between the resource owner, client, authorization server, and resource server to obtain an access token for accessing protected resources.
 
 ## Implemented Grant Types
-- **Authorization Code Grant**:
+- **Authorization Code Grant:**
   - *GitHub*: This grant type is implemented for GitHub authentication. It involves exchanging an authorization code for an access token after the user grants permission.
   - *Google*: Similarly, this grant type is implemented for Google login.
-- **Implicit Grant**:
+- **Implicit Grant:**
   - *Google*: Implemented for Google login, the Implicit Grant type directly issues an access token to the client without exchanging an authorization code.
+- **Refresh Token Grant:**
+  - *Google*: Implemented along with authorization grant type, the Refresh Token Grant Type is used to obtain a new access token when the current one expires, without requiring the user to re-authenticate. 
 
 ## Other Grant Types
-In addition to the implemented grant types, OAuth supports various other grant types, including:
+In addition to the implemented grant types, OAuth supports other grant types, including:
 - *Client Credentials Grant*: Suitable for machine-to-machine authentication where the client is the resource owner.
 - *Resource Owner Password Credentials Grant*: Involves the client obtaining the user's username and password directly.
-- *Refresh Token Grant*: Used to obtain a new access token when the current one expires, without requiring the user to re-authenticate.
 
 ## Usage
 To use OAuth authentication in your application:
