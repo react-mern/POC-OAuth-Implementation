@@ -8,7 +8,7 @@ export const POST = async (req: NextRequest) => {
   // Retrieve OAuth client ID and client secret from environment variables
   const clientId = process.env.GITHUB_CLIENT_ID;
   const clientSecret = process.env.GITHUB_CLIENT_SECRET;
-  const redirectUri = `${process.env.HOST_URL}/github/callback/authorization-code`;
+  const redirectUri = `${process.env.NEXT_PUBLIC_HOST_URL}/github/callback/authorization-code`;
 
   try {
     // Exchange the authorization code for an access token from Github OAuth server

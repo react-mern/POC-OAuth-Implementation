@@ -14,7 +14,7 @@ const LoginButton = ({ provider, selectedFlow }: LoginButtonProps) => {
     provider === "google"
       ? process.env.GOOGLE_CLIENT_ID
       : process.env.GITHUB_CLIENT_ID;
-  const redirectUri = `${process.env.HOST_URL}/${provider}/callback/${selectedFlow}`;
+  const redirectUri = `${process.env.NEXT_PUBLIC_HOST_URL}/${provider}/callback/${selectedFlow}`;
   const scope = encodeURIComponent(
     provider === "google" ? "email profile" : "user"
   );

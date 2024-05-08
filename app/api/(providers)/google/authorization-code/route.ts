@@ -9,7 +9,7 @@ export const POST = async (req: NextRequest) => {
   const clientId = process.env.GOOGLE_CLIENT_ID;
   const clientSecret = process.env.GOOGLE_CLIENT_SECRET;
   const redirectUri =
-    `${process.env.HOST_URL}/google/callback/authorization-code`;
+    `${process.env.NEXT_PUBLIC_HOST_URL}/google/callback/authorization-code`;
 
   try {
     // Exchange the authorization code for an access token and refresh token from Google's token endpoint

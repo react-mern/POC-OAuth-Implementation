@@ -74,7 +74,7 @@ const MembersPage = () => {
       const fetchData = async () => {
         try {
           startTransition(async () => {
-            const response = await fetch(`${process.env.HOST_URL}/api/members`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/members`, {
               headers: {
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${accessToken}`,

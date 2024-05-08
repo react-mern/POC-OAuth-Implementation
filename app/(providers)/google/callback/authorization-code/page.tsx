@@ -15,7 +15,7 @@ const GoogleCallback = async ({ searchParams }: GoogleCallbackProps) => {
   if (!isAccessTokenAvailable) {
     // Send the authorization code to the server to complete the authentication process
     const response = await fetch(
-      `${process.env.HOST_URL}/api/google/authorization-code`,
+      `${process.env.NEXT_PUBLIC_HOST_URL}/api/google/authorization-code`,
       {
         method: "POST",
         headers: {
