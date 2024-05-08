@@ -36,12 +36,12 @@ To use OAuth authentication in your application:
 
 **1. Clone the Repository**
 ```
-git clone https://github.com/RiteshAdwani/oauth.git
+git clone https://github.com/react-mern/POC-OAuth-Implementation.git
 ```
 
 **2. Install Dependencies**
 ```
-cd oauth
+cd POC-OAuth-Implementation
 npm install
 ```
 
