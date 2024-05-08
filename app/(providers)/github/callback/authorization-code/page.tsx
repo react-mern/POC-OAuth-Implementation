@@ -15,7 +15,7 @@ const GithubCallback = async ({ searchParams }: GithubCallbackProps) => {
   if(!isAccessTokenAvailable){
     // Send the authorization code to the server to complete the authentication process
     const response = await fetch(
-      `http://localhost:3000/api/github/authorization-code`,
+      `${process.env.HOST_URL}/api/github/authorization-code`,
       {
         method: "POST",
         headers: {

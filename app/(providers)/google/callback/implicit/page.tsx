@@ -31,7 +31,7 @@ const GoogleCallback = () => {
     startTransition(async () => {
       try {
         const response = await fetch(
-          "http://localhost:3000/api/google/implicit",
+          `${process.env.HOST_URL}/api/google/implicit`,
           {
             method: "POST",
             headers: {
