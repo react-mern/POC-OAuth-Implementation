@@ -34,25 +34,63 @@ In addition to the implemented grant types, OAuth supports other grant types, in
 ## Usage
 To use OAuth authentication in your application:
 
-### Registration:
+**1. Clone the Repository**
+```
+git clone https://github.com/RiteshAdwani/oauth.git
+```
+
+**2. Install Dependencies**
+```
+cd oauth
+npm install
+```
+
+**3. Registration**
 - Register your application with the respective OAuth provider (GitHub, Google).
 - Obtain client credentials (client ID and client secret) from the OAuth provider.
 
-### Configuration:
+**4. Configuration**
 - Configure your application to use the appropriate OAuth flow (Authorization Code or Implicit).
 - Set up redirect URIs and callback URLs as required.
+- For google, add `http://localhost:3000/google/callback/authorization-code` and `http://localhost:3000/google/callback/implicit`
+- For github, add `http://localhost:3000/google/callback` (github only allows one redirect uri to be added, however it will allow all the paths that start with the uri you specify)
 
-### Implementation:
+**5. Implementation**
 - Implement the necessary authentication endpoints and handle token exchange as per the selected grant type.
 - Ensure proper validation and security measures are in place.
 
-### Security:
+**6. Configure .env variables** 
+
+#### Example .env File (Development)
+To configure OAuth authentication in development, create a .env file in the root directory with the following environment variables:
+
+```
+GITHUB_CLIENT_ID=your_github_client_id
+GITHUB_CLIENT_SECRET=your_github_client_secret
+
+
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+
+NEXT_PUBLIC_HOST_URL=your_host_url(eg: http://localhost:3000)
+```
+Replace your_github_client_id, your_github_client_secret, your_google_client_id, and your_google_client_secret with your actual client IDs and client secrets obtained during the registration process with GitHub and Google.
+
+#### Example .env File (Production)
+For production, set environment variables directly in your hosting environment or container orchestration platform.
+
+**7. Run the development server:**
+```
+npm run dev
+```
+
+## Security
 - Ensure secure communication using HTTPS.
 - Protect client credentials (client ID and client secret) from unauthorized access.
 - Implement proper error handling and logging to identify and mitigate security threats.
 - Regularly rotate access and refresh tokens to enhance security.
 
-## Contributing
-Contributions are welcome! Feel free to submit pull requests or open issues for any improvements or bug fixes.
+## Live Link
+Find the hosted app at - [OAuth-Implementation](https://oauth-rho.vercel.app)
 
 
